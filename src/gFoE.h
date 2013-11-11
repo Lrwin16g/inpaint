@@ -1,5 +1,5 @@
-#ifndef _GFOE_H
-#define _GFOE_H
+#ifndef INPAINT_GFOE_H_
+#define INPAINT_GFOE_H_
 
 #include <vector>
 
@@ -56,4 +56,4 @@ private:
     void operator=( const GaussFoE& );
 };
 
-#endif
+#endif	// INPAINT_GFOE_H_
