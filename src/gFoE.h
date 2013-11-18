@@ -44,8 +44,8 @@ private:
     int  getPixelIndexInClique( int pixelIndex, const std::vector<int> &pixelIndexArray );
     void inverseMatrix( double const * const * src, double **dst, int dim );
     
-    double**    alpha_;
-    double*     beta_;
+    double	**alpha_;
+    double   	*beta_;
     double      lambda_;
     int         expertsNum_;
     int         cliqueWidth_;

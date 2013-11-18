@@ -12,7 +12,7 @@
 // GaussFoEの学習プログラム
 int main( int argc, char **argv )
 {
-    if( argc != 5 )
+    if ( argc != 5 )
     {
         std::cerr << "Usage: " << argv[ 0 ] << " <input> <output> <eta> <epsilon>" << std::endl;
         return -1;
@@ -20,7 +20,7 @@ int main( int argc, char **argv )
     
     // 学習用画像パスのリストを読込み
     std::ifstream ifs( argv[ 1 ] );
-    if( ifs.is_open() == false )
+    if ( ifs.is_open() == false )
     {
         std::cerr << "File open error: " << argv[ 1 ] << std::endl;
         return -1;
@@ -28,7 +28,7 @@ int main( int argc, char **argv )
     
     std::string str;
     std::vector< std::string > filelist;
-    while( getline( ifs, str ) )
+    while ( getline( ifs, str ) )
     {
         filelist.push_back( str );
     }
@@ -38,7 +38,7 @@ int main( int argc, char **argv )
     int width = 16;
     int height = 16;
     std::vector< std::vector<double> > supervisor;
-    for( size_t i = 0; i < filelist.size(); ++i )
+    for ( size_t i = 0; i < filelist.size(); ++i )
     {
         cv::Mat_<double> image = cv::imread( filelist[ i ].c_str(), 0 );
         image = image.reshape( 0, 1 ) / 255.0;
