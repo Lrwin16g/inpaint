@@ -42,7 +42,6 @@ private:
                       std::vector<std::vector<int> > &cliqueIndexArrayInPixel,
                       int width, int height);
     int  getPixelIndexInClique(int pixelIndex, const std::vector<int> &pixelIndexArray);
-    void inverseMatrix(double const * const * src, double **dst, int dim);
     
     double	**alpha_;
     double   	*beta_;
@@ -55,5 +54,7 @@ private:
     GaussFoE(const GaussFoE&);
     void operator=(const GaussFoE&);
 };
+
+void inverseMatrix(double const * const * src, double **dst, int dim);
 
 #endif	// INPAINT_GFOE_H_

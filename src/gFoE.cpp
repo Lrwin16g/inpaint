@@ -456,7 +456,7 @@ int GaussFoE::getPixelIndexInClique(int pixelIndex, const std::vector<int> &pixe
     return -1;
 }
 
-void GaussFoE::inverseMatrix(double const * const * src, double **dst, int dim)
+void inverseMatrix(double const * const * src, double **dst, int dim)
 {
     for (int i = 0; i < dim; ++i) {
 	for (int j = 0; j < dim; ++j) {
