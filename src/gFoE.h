@@ -23,18 +23,6 @@ public:
     void loadParameter(const char *filename);
     void saveParameter(const char *filename);
     
-    inline void setAlpha(int i, int j, double value)    {alpha_[i][j] = value;};
-    inline void setBeta(int i, double value)            {beta_[i] = value;};
-    inline void setLambda(double value)                 {lambda_ = value;};
-    
-    inline double   alpha(int i, int j) const {return alpha_[i][j];};
-    inline double   beta(int i)         const {return beta_[i];};
-    inline double   lambda()            const {return lambda_;};
-    inline int      expertsNum()        const {return expertsNum_;};
-    inline int      cliqueWidth()       const {return cliqueWidth_;};
-    inline int      cliqueHeight()      const {return cliqueHeight_;};
-    inline int      cliqueSize()        const {return cliqueWidth_ * cliqueHeight_;};
-
 private:
     void initialize();
     void cleanUp();
@@ -42,6 +30,7 @@ private:
                       std::vector<std::vector<int> > &cliqueIndexArrayInPixel,
                       int width, int height);
     int  getPixelIndexInClique(int pixelIndex, const std::vector<int> &pixelIndexArray);
+    inline int cliqueSize() const {return cliqueWidth_ * cliqueHeight_;};
     
     double	**alpha_;
     double   	*beta_;
