@@ -6,13 +6,15 @@
 #include <ctime>
 
 GaussFoE::GaussFoE()
-    : expertsNum_(0), cliqueWidth_(0), cliqueHeight_(0), alpha_(NULL), beta_(NULL), lambda_(0.0)
+    : expertsNum_(0), cliqueWidth_(0), cliqueHeight_(0),
+      alpha_(NULL), beta_(NULL), lambda_(0.0)
 {
     srand(time(NULL));
 }
 
 GaussFoE::GaussFoE(int expertsNum, int cliqueWidth, int cliqueHeight)
-    : expertsNum_(expertsNum), cliqueWidth_(cliqueWidth), cliqueHeight_(cliqueHeight), alpha_(NULL), beta_(NULL), lambda_(0.0)
+    : expertsNum_(expertsNum), cliqueWidth_(cliqueWidth), cliqueHeight_(cliqueHeight),
+      alpha_(NULL), beta_(NULL), lambda_(0.0)
 {
     srand(time(NULL));
     initialize();
