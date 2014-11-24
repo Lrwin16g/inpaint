@@ -9,9 +9,10 @@
 #include "gFoE.h"
 
 // インペイントの実行プログラム
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-    if (argc != 6) {
+    if (argc != 6)
+    {
         std::cerr << "Usage: " << argv[0] << " <input_img> <seed_img> <output_img> <param> <epsilon>" << std::endl;
         return -1;
     }
@@ -49,6 +50,6 @@ int main(int argc, char **argv)
     cv::Mat dstImage;
     dstImage_64.convertTo(dstImage, CV_8UC1);
     cv::imwrite(argv[3], dstImage);
-        
+    
     return 0;    
 }

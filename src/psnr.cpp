@@ -26,7 +26,8 @@ double psnr(const cv::Mat &src_img, const cv::Mat &cmp_img)
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3) {
+    if (argc != 3)
+    {
 	std::cerr << "Usage: " << argv[0] << " <image_1> <image_2>" << std::endl;
 	return -1;
     }
